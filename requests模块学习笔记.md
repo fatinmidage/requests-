@@ -39,3 +39,18 @@
    > cookies = {}
    >
    > requests.get(url,cookies=cookies)
+
+## 使用代理
+> proxies = {'http':'http://218.95.81.51:9000'}
+> 
+> requests = get(url,proxies=proxies)
+
+## 使用verify参数忽略CA证书
+> requests.get(url,verify=False)
+
+## 使用session保持cookies
+> ses = requests.sessions(url, headers)
+> 
+> res = ses.get(url,headers)
+> 
+> res = ses.post(url, data)
