@@ -14,9 +14,28 @@
 
 ## 发送带参数的get请求
 1. 直接在url字符串中加入参数
+
    > url = 'https://www.baidu.com/s?wd=python'
+   >
    > requests.get(url)
+
 2. 使用params参数带入
+
    > url = 'https://www.baidu.com/'
+   >
    > data = {'wd':'python'}
+   >
    > request.get(url,params=data)
+
+## 使用cookies
+1. 在headers参数中添加cookies字典
+   
+   > headers = {'cookie': 'asdfasdfasdfasdf'}
+   >
+   > requests.get(url,headers)
+
+2. 利用cookies参数
+   
+   > cookies = {}
+   >
+   > requests.get(url,cookies=cookies)
